@@ -1,0 +1,26 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'java'
+}
+
+group = 'com.tumod'
+version = '1.0.0'
+archivesBaseName = 'FlanJourneyMapIntegration'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    version = "47.4.0"
+    runDir = "run"
+}
+
+repositories {
+    maven { name = "journeymap" url = "https://repo.journeymap.com" }
+    maven { name = "flan" url = "https://repo.flan.com" }
+}
+
+dependencies {
+    implementation fg.deobf("journeymap:journeymap-api:5.9.+")
+    implementation fg.deobf("flan:flan-core:1.20-1.6.+")
+}
