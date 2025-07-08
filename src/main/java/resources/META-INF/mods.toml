@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="[47,)" # Compatible con Forge 47.x (1.20.1)
+license="MIT"
+issueTrackerURL="https://github.com/tu-usuario/FlanJourneyMapIntegration/issues"
+
+[[mods]]
+modId="flanjourneymap"
+version="1.0.0"
+displayName="Flan-JourneyMap Integration"
+description='''
+Muestra las zonas protegidas de Flan en JourneyMap como overlays.
+'''
+logoFile="assets/flanjourneymap/logo.png" # Opcional
+
+# Créditos (opcional)
+credits="Integración desarrollada por ChatGPT y tu nombre"
+
+# Autores
+authors="TuNombre"
+
+# Dependencias
+[[dependencies.flanjourneymap]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.flanjourneymap]]
+    modId="journeymap"
+    mandatory=true
+    versionRange="[5.9,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.flanjourneymap]]
+    modId="flan"
+    mandatory=true
+    versionRange="[1.6,)"
+    ordering="AFTER"
+    side="SERVER"
